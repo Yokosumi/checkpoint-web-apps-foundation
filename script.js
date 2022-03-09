@@ -5,21 +5,27 @@
 const firstPassword = document.querySelector("#firstPassword");
 const secondPassword = document.querySelector("#secondPassword");
 const toggleButton = document.querySelector("#toggleButton");
+const wrapper = document.querySelector("#wrapper");
+
 // input text value variables
-const firstPasswordValue = firstPassword.value;
-const secondPasswordValue = secondPassword.value;
-
-//comparison function of input values
 const testButton = document.querySelector("#test");
-testButton.addEventListener("click", () => {
-  compareInput();
-});
-function compareInput() {
-  let result = firstPasswordValue.localCompare(secondPasswordValue);
-  console.log(result);
-}
 
-// toggle password feature
+// adds Equality Check
+
+const equalityCheckBox = document.createElement("input");
+equalityCheckBox.type = "checkbox";
+const newPara = document.createElement("p");
+const newTextNode = document.createTextNode("Passwords are Equal");
+const appendTextNodeToNewPara = newPara.appendChild(newTextNode);
+wrapper.appendChild(equalityCheckBox);
+wrapper.appendChild(appendTextNodeToNewPara);
+
+// input eventlistener
+firstPassword.addEventListener("input", () => {});
+secondPassword.addEventListener("input", () => {});
+
+testButton.addEventListener("click", () => {});
+
 function togglePassword() {
   if (firstPassword.type === "password") {
     firstPassword.setAttribute("type", "text");
