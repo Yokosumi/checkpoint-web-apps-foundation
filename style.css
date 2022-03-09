@@ -1,0 +1,19 @@
+/* Basic Structure */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --header-font: "Lobster", cursive;
+  --general-text-font: "Open Sans", sans-serif;
+  --bg-color: lightsalmon;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
