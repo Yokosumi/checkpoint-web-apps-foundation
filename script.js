@@ -10,8 +10,8 @@ const toggleButton = document.querySelector("#toggleButton");
 const wrapper = document.querySelector("#wrapper");
 // checkboxes
 const equalityCheck = document.querySelector("#equalityCheck");
-const upperCaseCheck = document.querySelector("#upperCaseCheck");
 const lowerCaseCheck = document.querySelector("#lowerCaseCheck");
+const upperCaseCheck = document.querySelector("#upperCaseCheck");
 const numberCheck = document.querySelector("#numberCheck");
 const lengthCheck = document.querySelector("#lengthCheck");
 
@@ -23,9 +23,42 @@ function checkEquality() {
   }
 }
 
+function checkLowerCase() {
+  if (firstPassword.value.toUpperCase !== firstPassword.value) {
+    lowerCaseCheck.checked = true;
+  } else {
+    lowerCaseCheck.checked = false;
+  }
+}
+function checkUpperCase() {
+  if (firstPassword.value.toLowerCase() !== firstPassword.value) {
+    upperCaseCheck.checked = true;
+  } else {
+    upperCaseCheck.checked = false;
+  }
+}
+function checkNumber() {
+  if (/\d+/.test(firstPassword.value)) {
+    numberCheck.checked = true;
+  } else {
+    numberCheck.checked = false;
+  }
+}
+function checkLength() {
+  if (firstPassword.value.length >= 10) {
+    lengthCheck.checked = true;
+  } else {
+    lengthCheck.checked = false;
+  }
+}
+
 // input eventlistener
 firstPassword.addEventListener("input", () => {
   checkEquality();
+  checkLowerCase();
+  checkUpperCase();
+  checkNumber();
+  checkLength();
 });
 secondPassword.addEventListener("input", () => {
   checkEquality();
