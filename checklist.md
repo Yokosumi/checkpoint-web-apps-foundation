@@ -6,3 +6,5 @@ Use ✓ when a task is done.
 4. Position Elements[]
 5. Style Elements[]
 6. Test Everything[]
+
+todo: fix bug on checkbox when both inputs are emptied
