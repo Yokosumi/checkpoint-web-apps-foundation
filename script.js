@@ -9,9 +9,11 @@ function togglePassword() {
   if (firstPassword.type === "password") {
     firstPassword.setAttribute("type", "text");
     secondPassword.setAttribute("type", "text");
+    toggleButton.innerHTML = "Hide Passwords";
   } else {
     firstPassword.setAttribute("type", "password");
     secondPassword.setAttribute("type", "password");
+    toggleButton.innerHTML = "Show Passwords";
   }
 }
 
