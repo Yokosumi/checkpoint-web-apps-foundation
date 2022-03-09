@@ -1,30 +1,35 @@
 // add toggle feature for password from password dots to text and back on click ✓
 // add equality check for both passwords
 
-//adding variables
+//input bars
 const firstPassword = document.querySelector("#firstPassword");
 const secondPassword = document.querySelector("#secondPassword");
+// button
 const toggleButton = document.querySelector("#toggleButton");
+// wrapper
 const wrapper = document.querySelector("#wrapper");
+// checkboxes
+const equalityCheck = document.querySelector("#equalityCheck");
+const upperCaseCheck = document.querySelector("#upperCaseCheck");
+const lowerCaseCheck = document.querySelector("#lowerCaseCheck");
+const numberCheck = document.querySelector("#numberCheck");
+const lengthCheck = document.querySelector("#lengthCheck");
 
-// input text value variables
-const testButton = document.querySelector("#test");
-
-// adds Equality Check
-
-const equalityCheckBox = document.createElement("input");
-equalityCheckBox.type = "checkbox";
-const newPara = document.createElement("p");
-const newTextNode = document.createTextNode("Passwords are Equal");
-const appendTextNodeToNewPara = newPara.appendChild(newTextNode);
-wrapper.appendChild(equalityCheckBox);
-wrapper.appendChild(appendTextNodeToNewPara);
+function checkEquality() {
+  if (firstPassword.value === secondPassword.value) {
+    equalityCheck.checked = true;
+  } else {
+    equalityCheck.checked = false;
+  }
+}
 
 // input eventlistener
-firstPassword.addEventListener("input", () => {});
-secondPassword.addEventListener("input", () => {});
-
-testButton.addEventListener("click", () => {});
+firstPassword.addEventListener("input", () => {
+  checkEquality();
+});
+secondPassword.addEventListener("input", () => {
+  checkEquality();
+});
 
 function togglePassword() {
   if (firstPassword.type === "password") {
