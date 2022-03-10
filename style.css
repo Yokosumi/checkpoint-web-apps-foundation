@@ -16,4 +16,29 @@ html {
 body {
   height: 100%;
   margin: 0;
+  background: var(--bg-color);
+}
+
+/* Basic Structure */
+h1 {
+  font-family: var(--header-font);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.margin-bottom {
+  margin-bottom: 0.5rem;
+}
+
+#toggleButton {
+  margin-bottom: 1rem;
+}
+
+input[type="checkbox"] {
+  margin-bottom: 0.5rem;
 }
