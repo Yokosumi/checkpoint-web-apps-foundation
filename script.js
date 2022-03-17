@@ -15,6 +15,7 @@ const upperCaseCheck = document.querySelector("#upperCaseCheck");
 const numberCheck = document.querySelector("#numberCheck");
 const lengthCheck = document.querySelector("#lengthCheck");
 
+// check up functions
 function checkEquality() {
   if (firstPassword.value === secondPassword.value) {
     equalityCheck.checked = true;
@@ -24,7 +25,7 @@ function checkEquality() {
 }
 
 function checkLowerCase() {
-  if (firstPassword.value.toUpperCase !== firstPassword.value) {
+  if (firstPassword.value.toUpperCase() !== firstPassword.value) {
     lowerCaseCheck.checked = true;
   } else {
     lowerCaseCheck.checked = false;
@@ -64,6 +65,7 @@ secondPassword.addEventListener("input", () => {
   checkEquality();
 });
 
+// toggle password function
 function togglePassword() {
   if (firstPassword.type === "password") {
     firstPassword.setAttribute("type", "text");
